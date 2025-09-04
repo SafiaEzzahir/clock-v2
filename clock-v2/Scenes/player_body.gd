@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 100
+var speed = 150
 
 func _process(delta: float) -> void:
 	var position_change = _move(delta)
@@ -15,13 +15,13 @@ func _move(delta):
 	
 func _get_direction():
 	if Input.is_action_pressed("w_direction"):
-		return Vector2(-1, -1)
+		return Vector2(-1, -0.5)
 	elif Input.is_action_pressed("r_direction"):
-		return Vector2(1, -1)
+		return Vector2(1, -0.5)
 	elif Input.is_action_pressed("s_direction"):
-		return Vector2(-1, 1)
+		return Vector2(-1, 0.5)
 	elif Input.is_action_pressed("f_direction"):
-		return Vector2(1, 1)
+		return Vector2(1, 0.5)
 	else:
 		return Vector2(0, 0)
 	
