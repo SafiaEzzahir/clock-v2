@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://vt0evvn484wp"]
+[gd_scene load_steps=6 format=3 uid="uid://vt0evvn484wp"]
 
 [ext_resource type="Script" uid="uid://cxgqa7o54ovcx" path="res://Scenes/player_body.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bexectkvwfhcs" path="res://Assets/icon.svg" id="1_v0iea"]
 [ext_resource type="FontFile" uid="uid://dphc026cq8gkt" path="res://Assets/Eurostile.ttf" id="3_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://iffplbflc0m4" path="res://Assets/blobtexture.tres" id="3_vgqql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(38, 19)
@@ -26,6 +27,13 @@ offset_left = 257.0
 offset_top = -324.0
 offset_right = 574.0
 offset_bottom = -94.0
+
+[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D"]
+texture_filter = 1
+position = Vector2(492, -239)
+scale = Vector2(4, 4)
+texture = ExtResource("3_vgqql")
+hframes = 14
 
 [node name="Label" type="Label" parent="CharacterBody2D"]
 offset_left = 450.0

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://vt0evvn484wp" path="res://Scenes/player.tscn" id="2_qxrlw"]
 [ext_resource type="Script" uid="uid://bjcc61coivmrl" path="res://Scenes/tile_map_layer.gd" id="2_wrm1d"]
 [ext_resource type="Script" uid="uid://ccao6hryr8rvr" path="res://Scenes/player_node.gd" id="6_1l0tm"]
-[ext_resource type="PackedScene" uid="uid://38w2a0h1jc80" path="res://Scenes/blob.tscn" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://bu1xj34ecvkf5" path="res://Scenes/npc.tscn" id="6_i6g32"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wowpa"]
 texture = ExtResource("1_3dryh")
@@ -216,5 +216,5 @@ z_index = 20
 position = Vector2(577, 588)
 script = ExtResource("6_1l0tm")
 
-[node name="blob" parent="." instance=ExtResource("6_i6g32")]
-position = Vector2(319, 259)
+[node name="npc" parent="." instance=ExtResource("6_i6g32")]
+position = Vector2(542, 449)

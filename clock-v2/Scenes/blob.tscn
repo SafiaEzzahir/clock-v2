@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://38w2a0h1jc80"]
 
-[ext_resource type="Texture2D" uid="uid://c0fsw4y1ko3e7" path="res://images/pinkblob.png" id="1_cmfp3"]
 [ext_resource type="Script" uid="uid://628coddcc7sc" path="res://Scenes/blob.gd" id="1_cvry1"]
+[ext_resource type="Texture2D" uid="uid://iffplbflc0m4" path="res://Assets/blobtexture.tres" id="2_cvry1"]
 
 [sub_resource type="Animation" id="Animation_cvry1"]
 length = 0.001
@@ -50,7 +50,7 @@ script = ExtResource("1_cvry1")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2, 2)
-texture = ExtResource("1_cmfp3")
+texture = ExtResource("2_cvry1")
 hframes = 14
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
