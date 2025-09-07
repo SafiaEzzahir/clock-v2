@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu1xj34ecvkf5"]
+
+[ext_resource type="Texture2D" uid="uid://bexectkvwfhcs" path="res://Assets/icon.svg" id="1_acqhf"]
+[ext_resource type="Script" uid="uid://bygb71tfcsovm" path="res://Scenes/npc_body.gd" id="1_xxsvc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acqhf"]
+size = Vector2(38, 19)
+
+[node name="npc" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_xxsvc")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_acqhf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_acqhf")
