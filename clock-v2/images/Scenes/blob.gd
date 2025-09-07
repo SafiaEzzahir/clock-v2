@@ -2,15 +2,12 @@ extends Node2D
 
 var filled : bool = false
 
-signal collected
-
 func _process(delta: float) -> void:
 	$Sprite2D/AnimationPlayer.play("blob", -1, 10.0)
 	
 	if filled:
 		if Input.is_action_pressed("e_function"):
-			collected.emit()
-			self.free()
+			print("collect")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	filled = true

@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://vt0evvn484wp"]
+[gd_scene load_steps=4 format=3 uid="uid://vt0evvn484wp"]
 
 [ext_resource type="Script" uid="uid://cxgqa7o54ovcx" path="res://Scenes/player_body.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bexectkvwfhcs" path="res://Assets/icon.svg" id="1_v0iea"]
-[ext_resource type="FontFile" uid="uid://dphc026cq8gkt" path="res://Assets/Eurostile.ttf" id="3_6t5aa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(38, 19)
@@ -21,22 +20,14 @@ texture = ExtResource("1_v0iea")
 position = Vector2(0, 9.5)
 shape = SubResource("RectangleShape2D_cvnsp")
 
-[node name="TextureRect" type="TextureRect" parent="CharacterBody2D"]
-offset_left = 257.0
-offset_top = -324.0
-offset_right = 574.0
-offset_bottom = -94.0
-
-[node name="Label" type="Label" parent="CharacterBody2D"]
-offset_left = 450.0
-offset_top = -295.0
-offset_right = 536.0
-offset_bottom = -182.0
-theme_override_fonts/font = ExtResource("3_6t5aa")
-theme_override_font_sizes/font_size = 40
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0

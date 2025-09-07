@@ -1,11 +1,9 @@
-[gd_scene load_steps=9 format=4 uid="uid://ce7ph3we8uiqk"]
+[gd_scene load_steps=7 format=4 uid="uid://ce7ph3we8uiqk"]
 
 [ext_resource type="Texture2D" uid="uid://cwaijmpa0rf1w" path="res://images/tilemap-clockv2-v4.png" id="1_3dryh"]
-[ext_resource type="Script" uid="uid://bi3fyteucngqf" path="res://Scenes/game.gd" id="1_i6g32"]
 [ext_resource type="PackedScene" uid="uid://vt0evvn484wp" path="res://Scenes/player.tscn" id="2_qxrlw"]
 [ext_resource type="Script" uid="uid://bjcc61coivmrl" path="res://Scenes/tile_map_layer.gd" id="2_wrm1d"]
-[ext_resource type="Script" uid="uid://ccao6hryr8rvr" path="res://Scenes/player_node.gd" id="6_1l0tm"]
-[ext_resource type="PackedScene" uid="uid://38w2a0h1jc80" path="res://Scenes/blob.tscn" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://38w2a0h1jc80" path="res://Scenes/blob.tscn" id="4_3dryh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wowpa"]
 texture = ExtResource("1_3dryh")
@@ -202,7 +200,6 @@ physics_layer_0/collision_layer = 1
 sources/4 = SubResource("TileSetAtlasSource_wowpa")
 
 [node name="game" type="Node2D"]
-script = ExtResource("1_i6g32")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
@@ -211,10 +208,8 @@ tile_map_data = PackedByteArray("AAAHAAEABAAAAAIAAAAHAAIABAAAAAQAAAAHAAMABAAAAAQ
 tile_set = SubResource("TileSet_wrm1d")
 script = ExtResource("2_wrm1d")
 
-[node name="player" parent="." instance=ExtResource("2_qxrlw")]
-z_index = 20
-position = Vector2(577, 588)
-script = ExtResource("6_1l0tm")
+[node name="blob" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(704, 527)
 
-[node name="blob" parent="." instance=ExtResource("6_i6g32")]
-position = Vector2(319, 259)
+[node name="player" parent="." instance=ExtResource("2_qxrlw")]
+position = Vector2(577, 588)
